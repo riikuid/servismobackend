@@ -58,16 +58,12 @@ class TransactionController extends Controller
             'items' => 'required|array',
             'items.*.id' => 'exists:products,id',
             'total_price' => 'required',
-            'shipping_price' => 'required',
-            'status' => 'required|in:PENDING,SUCCESS,CANCELLED,FAILED,SHIPPING,SHIPPED'
         ]);
 
         $transaction = Transaction::create([
             'users_id' => Auth::user()->id,
             'address' => $request->address,
             'total_price' => $request->total_price,
-            'shipping_price' => $request->shipping_price,
-            'status' => $request->status,
         ]);
 
         foreach ($request->items as $product) {
