@@ -15,6 +15,7 @@
                     <x-nav-link href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @if (Auth::user()->roles == 'ADMIN')
                     <x-nav-link href="{{ route('dashboard.category.index') }}" :active="request()->routeIs('dashboard.category.index')">
                         {{ __('Category') }}
                     </x-nav-link>
@@ -24,6 +25,7 @@
                     <x-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
                         {{ __('Transaction') }}
                     </x-nav-link>
+                    @endif
                 </div>
 
             </div>
@@ -150,7 +152,7 @@
             <x-responsive-nav-link href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-
+            @if (Auth::user()->roles == 'ADMIN')
             <x-responsive-nav-link href="{{ route('dashboard.category.index') }}" :active="request()->routeIs('dashboard.category.index')">
                 {{ __('Category') }}
             </x-responsive-nav-link>
@@ -160,6 +162,7 @@
             <x-responsive-nav-link href="{{ route('dashboard.transaction.index') }}" :active="request()->routeIs('dashboard.transaction.index')">
                 {{ __('Transaction') }}
             </x-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

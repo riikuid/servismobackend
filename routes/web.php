@@ -7,7 +7,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\ProductGalleryController;
 use App\Http\Controllers\ProductCategoryController;
 
-/*
+/*zzz
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -17,6 +17,8 @@ use App\Http\Controllers\ProductCategoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::redirect('/', '/dashboard');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
