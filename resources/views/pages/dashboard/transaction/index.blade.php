@@ -15,6 +15,7 @@
                 columns: [
                     { data: 'id', name: 'id', width: '5%'},
                     { data: 'user.name', name: 'user.name' },
+                    { data: 'address', name: 'address' },
                     { data: 'total_price', name: 'total_price' },
                     {
                         data: 'action',
@@ -36,7 +37,8 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nama</th>
+                            <th>Nama User</th>
+                            <th>Nama Servis</th>
                             <th>Total Harga</th>
                             <th>Aksi</th>
                         </tr>
