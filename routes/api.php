@@ -35,5 +35,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('transactions', [TransactionController::class, 'all']);
     Route::post('checkout', [TransactionController::class, 'checkout']);
-    // Route::delete('transactions/{transaction}', [TransactionController::class, 'destroy']);
+    Route::delete('transactions/{transaction}', [TransactionController::class, 'destroy']);
 });

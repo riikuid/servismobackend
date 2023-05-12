@@ -19,7 +19,7 @@ class TransactionController extends Controller
 
         if($id)
         {
-            $transaction = Transaction::with(['items.product'])->find($id);
+            $transaction = Transaction::with(['items.product.galleries', 'items.product.category'])->find($id);
 
             if($transaction)
             {
@@ -38,7 +38,7 @@ class TransactionController extends Controller
             }
         }
 
-        $transaction = Transaction::with(['items.product'])->where('users_id', Auth::user()->id);
+        $transaction = Transaction::with(['items.product.galleries', 'items.product.category'])->where('users_id', Auth::user()->id);
 
         if($status)
         {
@@ -78,13 +78,13 @@ class TransactionController extends Controller
         return ResponseFormatter::success($transaction->load('items.product'), 'Transaksi Berhasil');
     }
 
-    // public function destroy(Transaction $transaction)
-    // {
-    //     $transaction->delete();
+    public function destroy(Transaction $transaction)
+    {
+        $transaction->delete();
 
-    //     return ResponseFormatter::success(
-    //         null,
-    //         'Transaksi berhasil dihapus'
-    //     );
-    // }
+        return ResponseFormatter::success(
+            null,
+            'Transaksi berhasil dihapus'
+        );
+    }
 }
