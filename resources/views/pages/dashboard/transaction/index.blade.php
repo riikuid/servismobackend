@@ -37,9 +37,9 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nama User</th>
-                            <th>Nama Servis</th>
-                            <th>Total Harga</th>
+                            <th>Name User</th>
+                            <th>Service List Name</th>
+                            <th>Total Price</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>

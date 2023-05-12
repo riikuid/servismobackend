@@ -39,7 +39,7 @@
                                 <td class="border px-6 py-4">{{ $transaction->user->email }}</td>
                             </tr>
                             <tr>
-                                <th class="border px-6 py-4 text-right">Save Name</th>
+                                <th class="border px-6 py-4 text-right">Service List Name</th>
                                 <td class="border px-6 py-4">{{ $transaction->address }}</td>
                             </tr>
 
