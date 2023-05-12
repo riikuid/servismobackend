@@ -78,13 +78,13 @@ class TransactionController extends Controller
         return ResponseFormatter::success($transaction->load('items.product'), 'Transaksi Berhasil');
     }
 
-    public function destroy(Transaction $transaction)
-    {
-        $transaction->delete();
+    // public function destroy(Transaction $transaction)
+    // {
+    //     $transaction->delete();
 
-        return ResponseFormatter::success(
-            null,
-            'Transaksi berhasil dihapus'
-        );
-    }
+    //     return ResponseFormatter::success(
+    //         null,
+    //         'Transaksi berhasil dihapus'
+    //     );
+    // }
 }
