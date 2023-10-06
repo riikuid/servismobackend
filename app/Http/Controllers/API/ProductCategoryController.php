@@ -13,7 +13,7 @@ class ProductCategoryController extends Controller
     {
         $id = $request->input('id');
         $limit = $request->input('limit');
-        $name = $request->input('id');
+        $name = $request->input('name');
         $show_product = $request->input('show_product');
         if ($id) {
             $category = ProductCategory::with([('products')])->find($id);
@@ -39,7 +39,8 @@ class ProductCategoryController extends Controller
             $category->with('products');
         }
         return ResponseFormatter::success(
-            $category->paginate($limit), 'Data kategori berhasil diambil'
+            $category->paginate($limit),
+            'Data kategori berhasil diambil'
         );
     }
 }

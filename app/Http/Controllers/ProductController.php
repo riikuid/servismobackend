@@ -81,7 +81,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $categories = ProductCategory::all();
-        return view('pages.dashboard.product.edit',[
+        return view('pages.dashboard.product.edit', [
             'item' => $product,
             'categories' => $categories
         ]);

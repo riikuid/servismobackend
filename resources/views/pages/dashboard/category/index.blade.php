@@ -12,9 +12,15 @@
                 ajax: {
                     url: '{!! url()->current() !!}',
                 },
-                columns: [
-                    { data: 'id', name: 'id', width: '5%'},
-                    { data: 'name', name: 'name' },
+                columns: [{
+                        data: 'id',
+                        name: 'id',
+                        width: '5%'
+                    },
+                    {
+                        data: 'name',
+                        name: 'name'
+                    },
                     {
                         data: 'action',
                         name: 'action',
@@ -24,14 +30,14 @@
                     },
                 ],
             });
-
         </script>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{ route('dashboard.category.create') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
+                <a href="{{ route('dashboard.category.create') }}"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
                     + Create Category
                 </a>
             </div>
@@ -39,11 +45,11 @@
                 <div class="px-4 py-5 bg-white sm:p-6">
                     <table id="crudTable">
                         <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nama</th>
-                            <th>Aksi</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nama</th>
+                                <th>Aksi</th>
+                            </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
